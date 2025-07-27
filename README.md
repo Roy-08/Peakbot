@@ -15,7 +15,6 @@ No login required for interaction
 
 How to use 
 After downloading the project use following commands using vs code :
-$ git clone https://github.com/python-engineer/chatbot-deployment.git
 
 $ cd chatbot-deployment
 
