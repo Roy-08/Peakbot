@@ -16,12 +16,17 @@ No login required for interaction
 How to use 
 After downloading the project use following commands using vs code :
 $ git clone https://github.com/python-engineer/chatbot-deployment.git
+
 $ cd chatbot-deployment
+
 $ python3 -m venv venv
+
 $ . venv/bin/activate
 
 (venv) pip install Flask torch torchvision nltk
+
 (venv) python
+
 >>> import nltk
 >>> nltk.download('punkt')
 
