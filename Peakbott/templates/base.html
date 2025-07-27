@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+       
+        #music-list {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        #music-list h3 {
+            margin: 0;
+        }
+        #music-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #music-list li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    
+   
+
+    <div class="container">
+        <div class="chatbox chatbox--active"> 
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="{{ url_for('static', filename='images/MainLogo.png') }}" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">PeakBot</h4>
+                        <p class="chatbox__description--header"></p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message..." id="user-input">
+                    <button class="chatbox__send--footer send__button" id="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+        document.getElementById('send-button').addEventListener('click', function() {
+            const userInput = document.getElementById('user-input').value;
+
+            
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                
+                const chatboxMessages = document.querySelector('.chatbox__messages div');
+                chatboxMessages.innerHTML += `<div>${data.answer}</div>`;
+                
+                
+                if (data.answer.startsWith("Here are some")) {
+                    const songsList = document.getElementById('songs');
+                    songsList.innerHTML = '';  
+                    const songEntries = data.answer.split('\n').slice(1);  
+
+                    songEntries.forEach(songEntry => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = songEntry;  
+                        songsList.appendChild(listItem);
+                    });
+                }
+
+                
+                document.getElementById('user-input').value = '';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

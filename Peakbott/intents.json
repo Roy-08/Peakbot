@@ -1,0 +1,193 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good morning",
+        "Good evening",
+        "What's up?",
+        "Hey there"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! How are you doing?",
+        "Hey! How can I help you today?",
+        "Good to see you! How can I assist?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Catch you later",
+        "Talk to you soon",
+        "Goodnight"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later! Take care!",
+        "Bye! Looking forward to talking to you again!",
+        "Goodbye! Stay safe!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thanks a lot",
+        "I appreciate it",
+        "Cheers"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "No problem!",
+        "Anytime! Glad to assist."
+      ]
+    },
+    {
+      "tag": "welcome",
+      "patterns": [
+        "Welcome",
+        "Nice to meet you",
+        "Glad to meet you",
+        "Good to see you"
+      ],
+      "responses": [
+        "Thank you! I'm happy to be here.",
+        "It's great to meet you too!",
+        "Glad to meet you! How can I assist?",
+        "Good to see you as well!"
+      ]
+    },
+    {
+      "tag": "how_are_you",
+      "patterns": [
+        "How are you?",
+        "How's it going?",
+        "How are things?",
+        "How are you doing?",
+        "Are you okay?"
+      ],
+      "responses": [
+        "I'm just a chatbot, but I'm functioning perfectly! How about you?",
+        "I'm great! Thanks for asking. How are you?",
+        "I'm here to help! How are you feeling today?",
+        "I’m doing well! How about you?"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "What's your name?",
+        "Who are you?",
+        "Tell me your name",
+        "What are you called?",
+        "Who is this?"
+      ],
+      "responses": [
+        "I'm PeakBot, your personal assistant!",
+        "My name is PeakBot, and I'm here to help!",
+        "I’m called PeakBot! How can I assist you today?"
+      ]
+    },
+    {
+      "tag": "develop",
+      "patterns": [
+        "Who developed you?",
+        "Who created you?",
+        "Who made you?",
+        "Tell me about your creator"
+      ],
+      "responses": [
+        "I was created by Rohit Yerunkar as part of an awesome project!",
+        "My creator is Rohit Yerunkar, studying Computer Science.",
+        "Rohit Yerunkar developed me, and I'm here to help you!"
+      ]
+    },
+    {
+      "tag": "sad",
+      "patterns": [
+        "I'm feeling sad",
+        "I'm upset",
+        "I'm down",
+        "I feel bad",
+        "I'm not happy"
+      ],
+      "responses": [
+        "I'm sorry you're feeling this way. Can I suggest some music to cheer you up?",
+        "I’m here for you. If you'd like, I can share a joke or some music to lift your spirits.",
+        "It's okay to feel sad sometimes. If you need someone to talk to, I'm here."
+      ]
+    },
+    {
+      "tag": "happy",
+      "patterns": [
+        "I'm happy",
+        "I'm feeling great",
+        "I'm in a good mood",
+        "I'm excited",
+        "I'm feeling awesome"
+      ],
+      "responses": [
+        "That's fantastic! How can I keep the good vibes going?",
+        "Great to hear! Would you like me to suggest some upbeat music?",
+        "Awesome! I love hearing you're happy. How can I assist you further?"
+      ]
+    },
+    {
+      "tag": "angry",
+      "patterns": [
+        "I'm angry",
+        "I'm mad",
+        "I'm frustrated",
+        "I'm furious",
+        "I'm upset"
+      ],
+      "responses": [
+        "I'm sorry you're feeling this way. Would you like me to play some calming music?",
+        "It’s okay to be angry. I’m here if you need to talk or relax with some music.",
+        "Take a deep breath! Let me know if I can help you feel better."
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": [
+        "Tell me a joke",
+        "Make me laugh",
+        "Do you know any jokes?",
+        "Say something funny",
+        "Can you tell a joke?"
+      ],
+      "responses": [
+        "Why don't skeletons fight each other? Because they don't have the guts!",
+        "Why did the computer go to therapy? It had too many bytes!",
+        "I'm reading a book about anti-gravity. It’s impossible to put down!",
+        "Why did the math book look sad? It had too many problems!"
+      ]
+    },
+    {
+      "tag": "laugh",
+      "patterns": [
+        "Haha",
+        "LOL",
+        "That was funny",
+        "You're hilarious",
+        "I can't stop laughing"
+      ],
+      "responses": [
+        "Glad I could make you laugh!",
+        "I'm here to bring joy!",
+        "Haha, happy to hear you're enjoying it!",
+        "Laughter is the best medicine!"
+      ]
+    }
+  ]
+}
